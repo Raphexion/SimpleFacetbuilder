@@ -2,7 +2,7 @@ from Person import Person
 import unittest
 
 
-class TestEmpty(unittest.TestCase):
+class TestPerson(unittest.TestCase):
     def setUp(self):
         pass
 
@@ -16,3 +16,11 @@ class TestEmpty(unittest.TestCase):
         self.assertIs(p.city, None)
         self.assertIs(p.company, None)
         self.assertEqual(p.income, 0)
+
+    def test_address(self):
+        street = object()
+        city = object()
+
+        p = Person.create().lives() \
+            .at(street).city(city) \
+            .build()
