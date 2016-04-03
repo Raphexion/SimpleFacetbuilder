@@ -30,13 +30,14 @@ One way of thinking is that we will:
 * different *builders* will provide an *API* to fill in some of the fields
 * finally we will extract/pass the object
 
+For example we could construct a Person like this
+
         p = Person.create() \
             .lives() \
             .at('10 Downing Street').city('London') \
             .works() \
             .at('The British Government').income(100) \
             .build()
-
 
 ## How to test
 
