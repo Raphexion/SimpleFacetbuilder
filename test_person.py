@@ -24,3 +24,8 @@ class TestPerson(unittest.TestCase):
         p = Person.create().lives() \
             .at(street).city(city) \
             .build()
+
+        self.assertIs(p.street, street)
+        self.assertIs(p.city, city)
+        self.assertIs(p.company, None)
+        self.assertEqual(p.income, 0)
